@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en-US">
+	<head>
+	{% include head.html %}
+	</head>
+	<body>
+	{% include header-page.html %}
+	<section class="content-section">
+	<div class="content-wrapper">
+	{% if page.previous %}
+	<a href="{{ page.previous }}" class="btn btn-nav">Back</a>
+	{% endif %}
+	{{ content }}
+	{% for post in paginator.posts %}
+    {% include post-list.html %}
+  {% endfor %}
+	{% include pagination.html %}
+	{% if page.previous %}
+	<a href="{{ page.previous }}" class="btn btn-nav">Back</a>
+	{% endif %}
+	</div>
+	</section>
+	{% include footer.html %}
+	{% if jekyll.environment == 'production' %}
+  {% include analytics.html %}
+  {% endif %}
+	</body>
+</html>

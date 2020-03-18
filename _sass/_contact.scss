@@ -1,0 +1,39 @@
+#contact-form {
+	display: grid;
+	grid-template-columns: 1fr;
+	input, textarea {
+		height: 30px;
+		padding: 5px 10px;
+		font-size: 14px;
+		color: #000;
+		letter-spacing: 1px;
+		background: #d8e187;
+		border: 1px solid #f3ff83;
+		margin-bottom: 25px;
+		-webkit-transition: all .1s ease-in-out;
+		-moz-transition: all .1s ease-in-out;
+		-ms-transition: all .1s ease-in-out;
+		-o-transition: all .1s ease-in-out;
+		transition: all .1s ease-in-out;
+	}
+	textarea {
+		height: 150px;
+	}
+	.submit {
+		width: 100%;
+		padding: 5px 10px;
+		font-size: 12px;
+		letter-spacing: 1px;
+		background: #881414;
+		height: 40px;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		color: #FFF;
+		border: 1px solid #a90b0b;
+		-webkit-transition: all .1s ease-in-out;
+		-moz-transition: all .1s ease-in-out;
+		-ms-transition: all .1s ease-in-out;
+		-o-transition: all .1s ease-in-out;
+		transition: all .1s ease-in-out;
+	}
+}

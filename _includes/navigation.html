@@ -1,0 +1,57 @@
+<nav class="main-nav">
+	
+	{% if page.url == "/" %}
+	<label for="show-menu" class="show-menu">
+	<span id="open-menu">Menu</span>
+	{% else %}
+	<label for="show-menu" class="show-menu" id="menu-page">
+	<span id="home"><a href="/">Home</a></span>
+	
+	<span id="open-menu">Menu</span>
+	{% endif %} 
+	</label>
+		<input type="checkbox" id="show-menu" role="button">
+		{% if page.url == "/" %}
+		<ul id="menu">
+			<li><a href="/skillz-games/">Skillz Games</a></li>
+			<li><a href="/skillz-promo-code/">Skillz Promo Code</a></li>
+			<li><a href="/skillz-match-codes/">Skillz Match Codes</a></li>
+			<li><a href="/videos/">Videos</a></li>
+			<li><a href="/contact-us/">Contact</a></li>
+		</ul>
+		{% else %}
+		<ul id="menu-mobile">
+			<li class="home"><a href="/">Home</a></li>
+			
+			{% if page.url == "/skillz-games/" %}
+			<li class="active"><a href="/skillz-games/">Skillz Games</a></li>
+			{% else %}
+			<li><a href="/skillz-games/">Skillz Games</a></li>
+			{% endif %}
+			
+			{% if page.url == "/skillz-promo-code/" %}
+			<li class="active"><a href="/skillz-promo-code/">Skillz Promo Code</a></li>
+			{% else %}
+			<li><a href="/skillz-promo-code/">Skillz Promo Code</a></li>
+			{% endif %}
+			
+			{% if page.url == "/skillz-match-codes/" %}
+			<li class="active"><a href="/skillz-match-codes/">Skillz Match Codes</a></li>
+			{% else %}
+			<li><a href="/skillz-match-codes/">Skillz Match Codes</a></li>
+			{% endif %}
+			
+			{% if page.url == "/videos/" %}
+			<li class="active"><a href="/videos/">Videos</a></li>
+			{% else %}
+			<li><a href="/videos/">Videos</a></li>
+			{% endif %}
+			
+			{% if page.url == "/contact-us/" %}
+			<li class="active"><a href="/contact-us/">Contact</a></li>
+			{% else %}
+			<li><a href="/contact-us/">Contact</a></li>
+			{% endif %}
+		</ul>
+		{% endif %}
+</nav>

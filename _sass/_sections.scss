@@ -1,0 +1,235 @@
+#skillz-games {
+	grid-template-rows: auto;
+	.content-wrapper {
+		display: grid;
+	}	
+	@media (min-width: 1024px) {
+		grid-template-rows: auto;
+		grid-template-columns: 1fr 3fr 1fr;
+		.content-wrapper {
+			grid-column: 2;
+		}
+	}
+	.section-wrapper {
+    text-align: center;
+	}
+	#svg4652 {
+		position: relative;
+		bottom: 50px;
+		justify-self: center;
+		@media (min-width: 1024px) {
+			width: 150px;
+			height: 150px;
+			bottom: 75px;
+		}
+	}
+	#svg4653 {
+    justify-self: center;
+    align-self: flex-start;
+    @media (min-width: 1024px) {
+			width: 184px;
+			height: 184px;
+		}
+	}
+}
+#skillz-promo-code {
+	grid-template-rows: auto;
+	.content-wrapper {
+		display: grid;
+	}	
+	@media (min-width: 1024px) {
+		grid-template-rows: auto;
+		grid-template-columns: 1fr 3fr 1fr;
+		.content-wrapper {
+			grid-column: 2;
+		}
+	}
+	.section-wrapper {
+    text-align: center;
+    align-self: flex-end;
+	}
+	#svg4655 {
+    align-self: center;
+    justify-self: center;
+    @media (min-width: 1024px) {
+			width: 184px;
+			height: 184px;
+		}
+	}
+}
+#blog {
+	grid-template-rows: auto;
+	.content-wrapper {
+		display: grid;
+	}	
+	@media (min-width: 1024px) {
+		grid-template-rows: auto;
+		grid-template-columns: 1fr 3fr 1fr;
+		.content-wrapper {
+			grid-column: 2;
+		}
+	}
+	.section-wrapper {
+		text-align: center;
+		align-self: flex-end;
+	}
+	#svg4654 {
+		align-self: center;
+    justify-self: center;
+    @media (min-width: 1024px) {
+			width: 184px;
+			height: 184px;
+		}
+	}
+}
+#skillz-match-codes {
+	grid-template-rows: auto;
+	.content-wrapper {
+		display: grid;
+	}	
+	@media (min-width: 1024px) {
+		grid-template-rows: auto;
+		grid-template-columns: 1fr 3fr 1fr;
+		.content-wrapper {
+			grid-column: 2;
+		}
+	}
+	.section-wrapper {
+		text-align: center;
+		align-self: flex-end;
+	}
+	#svg8727 {
+		align-self: center;
+    justify-self: center;
+    @media (min-width: 1024px) {
+			width: 184px;
+			height: 184px;
+		}
+	}
+}
+.content-section {
+	background: #262626 !important;
+	border-top: 1px solid #403f3f;
+	border-bottom: 1px solid #1c1b1b;
+	padding: 50px 10px;
+	@media (min-width: 1024px) {
+		grid-template-columns: 1fr 5fr 1fr;
+		grid-template-rows: auto;
+		.content-wrapper {
+			grid-column: 2;
+		}
+	}
+	@media (min-width: 1920px) {
+		grid-template-columns: 1fr 3fr 1fr;
+	}
+}
+#svg9155 {
+  position: relative;
+  top: 25px;
+  &:hover {
+  	opacity: 0.5;
+  }
+}
+#get-started {
+	border: none;
+	text-decoration: none;
+}
+#top {
+	justify-self: center;
+	z-index: 99999;
+	position: fixed;
+	text-decoration: none;
+	border: none;
+	cursor: auto;
+	//width: 100%;
+	// fix Chrome pos
+	//display: grid;
+  //width: 100%;
+  //grid-template-columns: 1fr;
+}
+// Fix #TOP on Chrome*
+//#svg6474 {
+//  grid-column: 1;
+//  justify-self: center;
+//}
+@media (min-width: 1024px) {
+	#svg6473 {
+		width: 400px;
+		height: 150px;
+	}
+}
+// 4K
+@media (min-height: 2000px) and (min-width: 3000px) {
+  #svg6473 {
+		width: 600px;
+		height: 225px;
+	}
+	#svg9155 {
+		width: 60px;
+		height: 160px;
+	}
+	#skillz-games #svg4652 {
+		width: 300px;
+		height: 300px;
+		bottom: 100px;
+	}
+	#skillz-games #svg4653 {
+		width: 512px;
+		height: 512px;
+	}
+	#skillz-promo-code #svg4655 {
+    width: 512px;
+    height: 512px;
+	}
+	#skillz-match-codes #svg8727 {
+    width: 512px;
+    height: 512px;
+	}
+	#blog #svg4654 {
+    width: 512px;
+    height: 512px;
+	}
+	footer #svg9156 {
+    width: 512px;
+    height: 512px;
+	}
+}
+// Phone Rotate
+// Standard Phones
+@media (max-height: 500px) {
+	body #main-header, 
+	body header, 
+	body section {
+		min-height: 150vh;
+	}
+	footer {
+		min-height: 200vh;
+	}
+}
+// Smaller (Nokia)
+@media (max-width: 280px) {
+	body #main-header, 
+	body header, 
+	body section {
+		min-height: 150vh;
+	}
+	footer {
+		min-height: 200vh;
+	}
+}
+// Adjust sections to vw insead of vh on long devices (ipad, kindle, etc)
+@media (min-height: 1024px) and (min-width: 768px) {
+	body #main-header, 
+	body header, 
+	body section {
+		min-height: 100vw;
+	}
+}
+// Adjust for laptops
+@media (min-height: 1024px) and (min-width: 1920px) {
+	body #main-header, 
+	body header, 
+	body section {
+		min-height: 50vw;
+	}
+}

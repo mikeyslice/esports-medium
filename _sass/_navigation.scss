@@ -1,0 +1,141 @@
+// Main Navigation
+.main-nav {
+	position: fixed;
+	width: 100%;
+	z-index: 999;
+	background: #171616d1;
+	border-bottom: 1px solid #171616d1;
+	.home {
+		display: none;
+	}
+	#home {
+		a {
+			display: flex;
+			text-decoration: none;
+			border: none;
+			//line-height: 1.3;
+			padding-left: 5px;
+		}
+	}
+}
+.content-wrapper {
+	text-align: center;
+}
+/* Display menu btn */
+.show-menu {
+  display: block;
+	text-align: center;
+	line-height: normal;
+	background: #c30000; //#881414;
+	border: 1px solid #a90b0b;
+	color: #fafafa;
+	height: 25px;
+	line-height: 25px;
+}
+#menu-page {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	text-align: right;
+	#home {
+		background: #770404;
+		border-right: 1px solid #710202;
+		padding-left: 5px;
+	}
+	#open-menu {
+		background: #c30000;
+		//border-top: 2px solid red;
+		padding-right: 15px;
+	}
+}
+/* Hide menu dropdown links until menu is opened */
+#menu, #menu-mobile {
+  display: none;
+	li {
+		a {
+			display: block;
+			height: 40px;
+			text-align: center;
+			line-height: 40px;
+			background: #881414; //#d8e187
+			text-decoration: none;
+			border: 1px solid #a90b0b; //#f3ff83
+			color: #fafafa;
+		}	
+	}
+}
+/* Hide checkbox */
+input[type=checkbox]{
+  display: none !important;
+  /* Show menu when invisible checkbox is checked */
+	&:checked ~ #menu, &:checked ~ #menu-mobile {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 1px 1px;
+		padding-top: 1px;
+	}
+}
+/* Media Queries */
+@media screen and (min-width: 1024px){
+	.main-nav {
+		background: none;
+		border: none;
+	}
+	/* Hide menu label button by default */
+	.show-menu {
+		display: none !important;
+	}	
+	/* Display list as grid and arrange links horizontally */
+	#menu {
+		display: grid;
+		grid-template-columns: repeat(5, 1fr);
+
+		.home {
+			display: block;
+		}
+		li {
+			grid-column: auto;
+			@media (min-width: 1024px) {
+				border: 1px solid #171616;
+			}
+		}
+		li:hover a {
+	  	background: #a90b0b; //#f3ff83
+		}
+	}
+	#menu-mobile {
+		display: grid;
+		grid-template-columns: repeat(6, 1fr);
+		
+		.home {
+			display: block;
+		}
+		li {
+			grid-column: auto;
+			@media (min-width: 1024px) {
+				border: 1px solid #171616;
+			}
+		}
+		li:hover a, .active a {
+	  	background: #a90b0b; //#f3ff83
+		}
+	}
+	/* Transition from collapsed menu to device resize */
+	input[type=checkbox]:checked ~ #menu {
+	  grid-template-columns: repeat(5, 1fr);
+	  background: transparent;
+	}
+	input[type=checkbox]:checked ~ #menu-mobile {
+	  grid-template-columns: repeat(6, 1fr);
+	  background: transparent;
+	}
+}
+body section .btn-nav {
+	padding: 2px 8px;
+	font-size: 1em;
+	margin: 0 auto 30px;
+	@media (min-width: 1024px) {
+		float: left;
+	}
+}
+
+

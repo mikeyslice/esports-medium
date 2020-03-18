@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en-US">
+	<head>
+	{% include head.html %}
+	</head>
+	<body>
+	{% include header-page.html %}
+	<section class="content-section">
+	{% if page.url == "/skillz-games/" %}
+	{% include icons/skillz-games/skillz-games-header.html %}
+	{% elsif page.url == "/skillz-promo-code/" %}
+	{% include icons/skillz-promo-code/skillz-promo-code-header.html %}
+	{% elsif page.url == "/about-us/" %}
+	{% include icons/about-us/about-us.html %}
+	{% elsif page.url == "/contact-us/" %}
+	{% include icons/contact-us/contact-us.html %}
+	{% elsif page.url == "/faq/" %}
+	{% include icons/faq/faq.html %}
+	{% elsif page.url == "/skillz-match-codes/" %}
+	{% include icons/skillz-match-codes/skillz-match-codes.html %}
+	{% elsif page.url == "/videos/" %}
+	{% include icons/videos/videos.html %}
+	{% endif %}
+	<div class="content-wrapper">
+	{% if page.previous %}
+	<a href="{{ page.previous }}" class="btn btn-nav">Back</a>
+	{% endif %}
+	{% if page.url == "/skillz-games/" %}
+	{% include pages/skillz-games.html %}
+	{% elsif page.url == "/skillz-promo-code/" %}
+	{% include pages/skillz-promo-code.html %}
+	{% elsif page.url == "/skillz-match-codes/" %}
+	{% include pages/skillz-match-codes.html %}
+	{% elsif page.url == "/privacy-policy/" %}
+	{{ content }}
+	{% elsif page.url == "/terms-and-conditions/" %}
+	{{ content }}
+	{% elsif page.url == "/disclosure-policy/" %}
+	{{ content }}
+	{% elsif page.url == "/about-us/" %}
+	{{ content }}
+	{% elsif page.url == "/contact-us/" %}
+	{{ content }}
+	{% include pages/contact-us.html %}
+	{% elsif page.url == "/faq/" %}
+	{{ content }}
+	{% include pages/faq.html %}
+	{% elsif page.url == "/videos/" %}
+	{{ content }}
+	{% include pages/videos.html %}
+	{% elsif page.url == "/thank-you/" %}
+	{{ content }}
+	{% elsif page.url == "/videos/archive/" %}
+	{{ content }}
+	{% include pages/videos-archive.html %}
+	{% elsif page.url == "/blog/" %}
+	{{ content }}
+	{% for post in paginator.posts %}
+    {% include post-list.html %}
+  {% endfor %}
+	{% include pagination.html %}
+	{% endif %}
+	{% if page.previous %}
+	<a href="{{ page.previous }}" class="btn btn-nav">Back</a>
+	{% endif %}
+	</div>
+	</section>
+	{% include footer.html %}
+	{% if jekyll.environment == 'production' %}
+  {% include analytics.html %}
+  {% endif %}
+	</body>
+</html>

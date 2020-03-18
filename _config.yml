@@ -1,0 +1,25 @@
+url: 'https://esportsmedium.com'
+permalink: '/:title/'
+markdown: kramdown
+title: eSports Medium
+#description: >-
+#  eSports Medium Watch, Play, and WIN REAL MONEY! Watch Videos 1 ABOUT USGamer looking for ways to make money playing mobile games? The search stops here! This is your chance to land FREE entries into top tournaments with incredible cash prizes. Whether you’re a stay-at-home parent, deal hunter, media consumer, game show enthusiast, social casino.
+#description: >-
+#  Win real money by watching YouTube videos and playing mobile games. Join eSports Medium today to win free entries into tournaments with incredible cash prizes!
+description: >- 
+  Win real money by playing mobile games and watching YouTube videos. Join eSports Medium, your Skillz games companion!
+exclude: [brief.md]
+include: ["_redirects", "_headers", "robots.txt"]
+sass:
+  style: compressed
+defaults:
+  - scope:
+      path: "assets/img"
+    values:
+      image: true  
+permalink: "/blog/:title/"
+paginate_path: "blog/:num/"
+plugins:
+  - jekyll-paginate
+paginate: 5
+syntax-highlight: True

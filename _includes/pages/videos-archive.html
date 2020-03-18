@@ -1,0 +1,22 @@
+<div class="yt-grid-archive">
+{% assign videos = site.data.videos %}
+{% for video in videos | offset: 10 %}
+
+<div class="yt-wrap">
+	<div class="video-info">
+		{% if video.title %}
+		<a href="https://www.youtube.com/watch?v={{ video.id }}" target="_blank">
+		<img src="https://img.youtube.com/vi/{{ video.id }}/0.jpg">
+		<h3>{{ video.title }}</h3>
+		</a>
+		{% endif %}
+		<h3 class="thin">{{ video.date }}</h3>
+	</div>
+</div>
+{% endfor %}
+</div>
+<hr>
+<br>
+<h3>Mikey Slice on YouTube</h3>
+<p>You've reached the end of the eSports Medium video archive. For more content please visit <a href="https://www.youtube.com/channel/UCML7namxZY4u9HtMoYBYPMA" target="_blank">Mikey's YouTube channel</a>!
+</p>

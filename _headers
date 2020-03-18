@@ -1,0 +1,6 @@
+# expiry headers
+
+/assets/css/main.css
+	cache-control: max-age=31556926
+	
+

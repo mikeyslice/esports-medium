@@ -1,0 +1,59 @@
+// /skillz-games/
+#games-grid {
+	display: grid;
+	grid-gap: 50px;
+	padding: 0 20px;
+	li {
+		display: grid;
+		//grid-template-rows: repeat(3, 1fr);
+		grid-template-columns: 1fr 1fr;
+		min-height: 100px;
+		//border: 1px solid;
+		align-items: center;
+		//border-bottom: 1px solid #484747;
+		}
+	img {
+		max-width: 50px;
+		border-radius: 10px;
+		justify-self: center;
+	}
+	a {
+		border: none;
+	}
+	#more-info {
+		fill: #fff; //#d8e187;
+		border: 1px solid #fff; //f3ff83;
+		border-radius: 50px;
+	}
+	h3 {
+		font-variant: all-petite-caps;
+		padding: 5px 0;
+	}
+}
+#svg15453, #svg9158, #svg17450, #svg19453, #svg83327, #svg1533453 {
+  position: relative;
+  bottom: 100px;
+  justify-self: center;
+  @media (min-width: 1024px) {
+  	grid-column: 2;
+  	height: 184px;
+  	width: 184px;
+  }
+}
+// /skillz-promo-code
+.content-section {
+	img {
+		max-width: 90%;
+	}
+	.bullets {
+    list-style: decimal;
+    padding: 0 20px;
+    font-size: 1.3em;
+    li {
+    	padding: 10px 0;
+    }
+	}
+}
+
+
+

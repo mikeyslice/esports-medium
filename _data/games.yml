@@ -1,0 +1,237 @@
+- name: Cube Cube
+  page-link: /cube-cube
+  image-path: /assets/icons/games/cube-cube.jpg
+  image-alt: Cubes
+  ios-dl: https://esportsmedium.com/cube-cube-ios-download
+  android-dl: https://esportsmedium.com/cube-cube-samsung-download
+
+- name: BeSwitched Tournament
+  page-link: /beswitched-tournament
+  image-path: /assets/icons/games/beswitched-tournament.png
+  image-alt: Cute owl
+  ios-dl: https://esportsmedium.com/beswitched-ios-download
+  
+- name: Solitaire Cube
+  page-link: /solitaire-cube
+  image-path: /assets/icons/games/solitaire-cube.png
+  image-alt: Solitaire cards
+  ios-dl: https://esportsmedium.com/solitaire-cube-ios-download
+  android-dl: https://esportsmedium.com/solitaire-cube-samsung-download
+  
+- name: Pro Pool – Ultimate 8 Ball
+  page-link: /pro-pool-ultimate-8-ball
+  image-path: /assets/icons/games/pro-pool-ultimate-8-ball.png
+  image-alt: Billiards
+  ios-dl: https://esportsmedium.com/real-money-pool-ios-download
+  android-dl: https://esportsmedium.com/real-money-pool-samsung-download
+  
+- name: Strike! eSports Bowling
+  page-link: /strike-esports-bowling
+  image-path: /assets/icons/games/strike-esports-bowling.png
+  image-alt: Bowling pins
+  ios-dl: https://esportsmedium.com/strike-esports-bowling-ios-download
+  android-dl: https://esportsmedium.com/strike-esports-bowling-samsung-download
+  
+- name: Dominoes Gold
+  page-link: /dominoes-gold
+  image-path: /assets/icons/games/dominoes-gold.png
+  image-alt: Golden dominoes
+  ios-dl: https://esportsmedium.com/dominoes-gold-ios-download
+  android-dl: https://esportsmedium.com/dominoes-gold-samsung-download
+  
+- name: Bubble Shooter Tournaments
+  page-link: /bubble-shooter-tournaments
+  image-path: /assets/icons/games/bubble-shooter-tournaments.png
+  image-alt: Colorful bubbles
+  ios-dl: https://esportsmedium.com/bubble-shooter-ios-download
+  android-dl: https://esportsmedium.com/bubble-shooter-samsung-download
+  
+- name: 21 Blitz
+  page-link: /21-blitz
+  image-path: /assets/icons/games/21-blitz.png
+  image-alt: 21 solitaire
+  ios-dl: https://esportsmedium.com/21-blitz-ios-download
+  android-dl: https://esportsmedium.com/21-blitz-samsung-download
+  
+- name: Spider Solitaire Cube
+  page-link: /spider-solitaire-cube
+  image-path: /assets/icons/games/spider-solitaire-cube.png
+  image-alt: Solitaire cards
+  ios-dl: https://esportsmedium.com/spider-solitaire-cube-ios-download
+  
+- name: Bubble Shooter Arena
+  page-link: /bubble-shooter-arena
+  image-path: /assets/icons/games/bubble-shooter-arena.png
+  image-alt: Shooting bubbles
+  ios-dl: https://esportsmedium.com/bubble-shooter-arena-ios-download
+  android-dl: https://esportsmedium.com/bubble-shooter-arena-samsung-download
+  
+- name: Solitaire Tour - Classic Cards
+  page-link: /solitaire-tour-classic-cards
+  image-path: /assets/icons/games/solitaire-tour-classic-cards.jpg
+  image-alt: Solitaire classic cards
+  ios-dl: https://esportsmedium.com/solitaire-tour-ios-download
+  android-dl: https://esportsmedium.com/solitaire-tour-samsung-download
+  
+- name: Block Blitz
+  page-link: /block-blitz
+  image-path: /assets/icons/games/block-blitz.jpg
+  image-alt: Puzzle blocks
+  ios-dl: https://esportsmedium.com/block-blitz-ios-download
+  android-dl: https://esportsmedium.com/block-blitz-samsung-download
+  
+- name: Pyramid Solitaire Cube
+  page-link: /pyramid-solitaire-cube
+  image-path: /assets/icons/games/pyramid-solitaire-cube.png
+  image-alt: Playing cards
+  ios-dl: https://esportsmedium.com/pyramid-solitaire-cube-ios-download
+  
+- name: Freecell Solitaire Cube
+  page-link: /freecell-solitaire-cube
+  image-path: /assets/icons/games/freecell-solitaire-cube.png
+  image-alt: Solitaire cards
+  ios-dl: https://esportsmedium.com/freecell-solitaire-cube-ios-download
+  
+- name: Diamond Strike
+  page-link: /diamond-strike
+  image-path: /assets/icons/games/diamond-strike.png
+  image-alt: Pink diamond
+  ios-dl: https://esportsmedium.com/diamond-strike-ios-download
+  
+- name: Texas Solitaire Cube
+  page-link: /texas-solitaire-cube
+  image-path: /assets/icons/games/texas-solitaire-cube.png
+  image-alt: Poker chip
+  ios-dl: https://esportsmedium.com/texas-solitaire-cube-ios-download
+  android-dl: https://esportsmedium.com/texas-solitaire-cube-samsung-download
+  
+- name: Jewel Blitz
+  page-link: /jewel-blitz
+  image-path: /assets/icons/games/jewel-blitz.png
+  image-alt: Diamond blocks
+  ios-dl: https://esportsmedium.com/jewel-blitz-ios-download
+  android-dl: https://esportsmedium.com/jewel-blitz-samsung-download
+  
+- name: Bubble Shooter League
+  page-link: /bubble-shooter-league
+  image-path: /assets/icons/games/bubble-shooter-league.png
+  image-alt: Colorful bubbles
+  ios-dl: https://esportsmedium.com/bubble-shooter-league-ios-download
+  
+- name: Bubble Cube 2
+  page-link: /bubble-cube
+  image-path: /assets/icons/games/bubble-cube.png
+  image-alt: Bubble sky
+  ios-dl: https://esportsmedium.com/bubble-cube-ios-download
+  
+- name: Mahjong - Tournament Games
+  page-link: /mahjong-tournament-games
+  image-path: /assets/icons/games/mahjong.png
+  image-alt: Mahjong red dragon
+  ios-dl: https://esportsmedium.com/mahjong-ios-download
+  androdid-dl: https://esportsmedium.com/mahjong-samsung-download
+  
+- name: TENS! Tournament
+  page-link: /tens-tournament
+  image-path: /assets/icons/games/tens-tournament.png
+  image-alt: Dice
+  ios-dl: https://esportsmedium.com/tens-ios-download
+
+- name: Neoblox Tournaments
+  page-link: /neoblox-tournaments
+  image-path: /assets/icons/games/neoblox-tournament.png
+  image-alt: Abstract cube
+  ios-dl: https://esportsmedium.com/neoblox-ios-download
+  androdid-dl: https://esportsmedium.com/neoblox-samsung-download
+  
+- name: Diamond Blitz 2
+  page-link: /diamond-blitz
+  image-path: /assets/icons/games/diamond-blitz.jpg
+  image-alt: Diamonds
+  ios-dl: https://esportsmedium.com/diamond-blitz-ios-download
+  
+- name: Wordie – eSports Word Game
+  page-link: /wordie-esports-word-game
+  image-path: /assets/icons/games/wordie-esports-word-game.png
+  image-alt: Chirping bird
+  ios-dl: https://esportsmedium.com/wordie-ios-download
+  androdid-dl: https://esportsmedium.com/wordie-samsung-download
+  
+- name: Millionaire TV Cash Prizes
+  page-link: /millionaire-tv-cash-prizes
+  image-path: /assets/icons/games/millionaire-tv-cash-prizes.png
+  image-alt: Letter M for Money
+  ios-dl: https://esportsmedium.com/millionaire-ios-download
+  androdid-dl: https://esportsmedium.com/millionaire-samsung-download
+  
+- name: Brick Breaker – Win Money!
+  page-link: /brick-breaker
+  image-path: /assets/icons/games/brick-breaker.png
+  image-alt: Boxes breaking
+  ios-dl: https://esportsmedium.com/brick-breaker-ios-download
+  androdid-dl: https://esportsmedium.com/brick-breaker-samsung-download
+  
+- name: Golf Pro! eSports Golf Game
+  page-link: /golf-pro-esports
+  image-path: /assets/icons/games/golf-pro-esports.png
+  image-alt: Golf ball
+  ios-dl: https://esportsmedium.com/golf-pro-ios-download
+  
+- name: Quezztion Real Money Trivia
+  page-link: /quezztion-real-money-trivia
+  image-path: /assets/icons/games/quezztion-real-money-trivia.png
+  image-alt: Letter Q
+  ios-dl: https://esportsmedium.com/quezztion-ios-download
+  android-dl: https://esportsmedium.com/quezztion-samsung-download
+
+- name: Dunk A Lot – Tournaments
+  page-link: /dunk-a-lot-tournaments
+  image-path: /assets/icons/games/dunk-a-lot-tournaments.png
+  image-alt: Basketball
+  ios-dl: https://esportsmedium.com/dunk-a-lot-ios-download
+  android-dl: https://esportsmedium.com/dunk-a-lot-samsung-download
+  
+- name: Williams Pinball
+  page-link: /williams-pinball
+  image-path: /assets/icons/games/williams-pinball.png
+  image-alt: W ball
+  ios-dl: https://esportsmedium.com/williams-pinball-ios-download
+  
+- name: Word Race
+  page-link: /word-race
+  image-path: /assets/icons/games/word-race.png
+  image-alt: Letters
+  ios-dl: https://esportsmedium.com/word-race-ios-download
+  
+- name: Soda Can Strike
+  page-link: /soda-can-strike
+  image-path: /assets/icons/games/soda-can-strike.png
+  image-alt: Soda cans
+  ios-dl: https://esportsmedium.com/can-strike-ios-download
+  android-dl: https://esportsmedium.com/can-strike-samsung-download
+  
+- name: Cribbage Blitz
+  page-link: /cribbage-blitz
+  image-path: /assets/icons/games/cribbage-blitz.png
+  image-alt: Speeding balls
+  ios-dl: https://esportsmedium.com/cribbage-blitz-ios-download
+  
+- name: Word Cube
+  page-link: /word-cube
+  image-path: /assets/icons/games/word-cube.png
+  image-alt: Puzzle letters
+  ios-dl: https://esportsmedium.com/word-cube-ios-download
+  android-dl: https://esportsmedium.com/word-cube-samsung-download
+  
+- name: Golf Solitaire Cube
+  page-link: /golf-solitaire-cube
+  image-path: /assets/icons/games/golf-solitaire-cube.png
+  image-alt: Playing cards
+  ios-dl: https://esportsmedium.com/golf-solitaire-cube-ios-download
+  
+- name: Question Cube
+  page-link: /question-cube
+  image-path: /assets/icons/games/question-cube.png
+  image-alt: Gift cube
+  ios-dl: https://esportsmedium.com/question-cube-ios-download
+  android-dl: https://esportsmedium.com/question-cube-samsung-download

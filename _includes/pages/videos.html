@@ -1,0 +1,21 @@
+<div class="yt-grid">
+<!--{% assign videos = site.data.videos | where: "cat", "hunt" %}-->
+{% for video in site.data.videos | limit: 10 %}
+<div class="yt-wrap">
+  <div class="ytcontainer">
+    <iframe class="yt" width="560" height="315" frameborder="0" allowfullscreen src="https://www.youtube.com/embed/{{ video.id }}"></iframe>
+  </div>
+	<div class="video-info">
+		{% if video.title %}
+		<h3>{{ video.title }}</h3>
+		{% endif %}
+		{% if video.date %}
+		<p>{{ video.date }}</p>
+		{% endif %}
+	</div>
+</div>
+{% endfor %}
+</div>
+<hr>
+<br>
+<a href="/videos/archive/" class="btn">Videos Archive</a>

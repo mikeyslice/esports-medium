@@ -1,0 +1,14 @@
+<header id="main-header">
+	{% include navigation.html %}
+	<div class="content-wrapper">
+	{% include em-logo-font.html %}
+	<h1>{{ page.title }}</h1>
+	{% if page.url == "/404" %}
+	<h2>Looking for the <a href="/">homepage</a>?</h2>
+	{% else %}
+	<a href="#skillz-games" id="get-started">
+	{% include icons/header-arrow.html %}
+	</a>
+	{% endif %}
+	</div>
+</header>

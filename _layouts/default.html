@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en-US">
+	<head>
+		{% include head.html %}
+	</head>
+	<body id="index">
+		{% include header.html %}
+		{{ content }}
+		{% include footer.html %}
+		{% if jekyll.environment == 'production' %}
+    {% include analytics.html %}
+    {% endif %}
+	</body>
+</html>

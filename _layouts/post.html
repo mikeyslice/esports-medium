@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en-US">
+	<head>
+		{% include head.html %}
+	</head>
+	<body id="post">
+		{% include header-page.html %}
+		<section class="content-section">
+			<div class="content-wrapper">
+				<a href="/blog/" class="btn btn-nav">Back</a>
+				{{ content }}
+				<a href="/blog/" class="btn btn-nav">Back</a>
+			</div>
+		</section>
+		{% include footer.html %}
+		{% if jekyll.environment == 'production' %}
+    {% include analytics.html %}
+    {% endif %}
+	</body>
+</html>

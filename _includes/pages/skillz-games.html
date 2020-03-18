@@ -1,0 +1,41 @@
+<h2>Intro</h2>
+<p>
+Skillz games are hard to find. But, not anymore!
+</p>
+<p>
+Since Skillz isn’t a game itself, but rather a platform that goes into existing games, it makes finding a Skillz game rather tough. 
+</p>
+<p>
+That’s right! Skillz isn’t a game! Skillz is just a platform that goes into a mobile game that enables the players of that game to play against each other for money! 
+</p>
+<p>
+Here’s a list of the most popular Skillz games.
+</p>
+<br>
+<hr>
+<br>
+<h2>Skillz Games List</h2>
+<br><br>
+<ul id="games-grid">
+{% for game in site.data.games %}
+<li>
+<div>
+<img src="{{ game.image-path }}" alt="{{ game.image-alt }}" title="{{ game.name }}">
+<h3>{{ game.name }}</h3>
+</div>
+<div>
+{% if game.ios-dl %}
+<a href="{{ game.ios-dl }}">
+{% include icons/ios-btn.html %}
+</a>
+{% endif %}
+{% if game.android-dl %}
+<a href="{{ game.android-dl }}">
+{% include icons/android-btn.html %}
+</a>
+{% endif %}
+</div>
+</li>
+{% endfor %}
+</ul>
+

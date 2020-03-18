@@ -1,0 +1,13 @@
+{% for question in site.data.questions %}
+<a href="#{{ question.number }}">#{{ question.number }} - {{ question.title }}</a><br><br>
+{% endfor %}
+<br><br>
+<hr>
+{% for question in site.data.questions %}
+<br><br>
+<h3 id="{{ question.number }}">#{{ question.number }} - {{ question.title }}</h3>
+<p>{{ question.answer }}</p>
+<br>
+<hr>
+{% endfor %}
+

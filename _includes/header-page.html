@@ -1,0 +1,25 @@
+<header>
+	{% include navigation.html %}
+	<div class="content-wrapper">
+	<h1>{{ page.title }}</h1>
+	{% if page.url == "/404" %}
+	<h2>Looking for the <a href="/">homepage</a>?</h2>
+	{% elsif page.subtitle %}
+	<br />
+	<p>{{ page.subtitle }}</p>
+	{% endif %}
+	{% if page.layout == "post" %}
+	<br />
+	{% if page.updated %}
+	<small>
+	Updated: {{ page.updated | date: "%B %-d, %Y" }} (Deployed: {{ page.date | date: "%B %-d, %Y" }})
+	</small>
+	{% else %}
+	<small>Deployed: {{ page.date | date: "%B %-d, %Y" }}</small>
+	{% endif %}
+	{% if page.img %}
+	<img src="{{ page.img }}" class="post-img" title="{{ page.title }}" alt="{{ page.title }}">
+	{% endif %}
+	{% endif %}
+	</div>
+</header>

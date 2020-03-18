@@ -1,0 +1,139 @@
+body {
+  font-family: Sans-serif;
+  color: #fafafa;
+  background: #a90b0b;
+  font-size: 12px; 
+  a {
+  	border-bottom: 1px solid white;
+  }
+  hr {
+    color: #403f3f;
+	}
+	code {
+    background: #262626;
+    border: 1px solid #403f3f;
+    padding: 5px 10px;
+    display: inline-block;
+	}
+	iframe {
+    max-width: 100%;
+    border: 2px solid #881414;
+	}
+  p {
+  	padding: 0 50px;
+		text-align: center;
+		font-size: 1.4em;
+		// Fix horizontal scroll small devices
+		@media (max-width: 350px) {
+			padding: 0 10px;
+		}
+  }
+  h1 {
+  	text-align: center;
+  	font-size: 1.8em;
+  	color: #fafafa;
+  	padding: 0 30px;
+  }
+  h2 {
+  	text-align: center;
+  }
+  h3 {
+  	font-size: 1em;
+	}
+  #main-header {
+  	min-height: 100vh;
+  }
+  header {
+  	min-height: 50vh;
+  	display: grid;
+  	background: $secondary;
+  	grid-template-rows: auto;
+  	.content-wrapper {
+  		align-self: center;
+  		//grid-row: 2 / span 1;
+  		p {
+  			margin: 0;
+  			@media (min-width: 1024px) {
+  				font-size: 1.2em;
+  			}
+  		}
+  	}
+  	.btn {
+  		text-align: center;
+  	}
+  	img {
+  		display: block;
+  		text-align: center;
+  	}
+		ul {
+			display: grid;
+			grid-template-rows: repeat(3, 1fr);
+			grid-template-columns: 1fr 1fr;
+			text-align: center;
+			li {
+				display: inline-block;
+				color: #252424;
+				font-size: 1.2em;
+				a {
+					color: #252424;
+				}
+				&:nth-child(1) {
+					grid-column: 1/3;
+				}
+			}
+		}
+  }
+  .content-section {
+		grid-template-rows: auto;
+  }
+  section {
+  	min-height: 50vh;
+  	display: grid;
+  	grid-template-rows: repeat(3, 1fr);
+  	background: gray;
+  	h2 {
+  		display: block;
+			align-self: flex-end;
+  	}
+  	h3 {
+			font-size: 1.4em;
+		}
+  	.btn {
+  		display: inline-block;
+			align-self: flex-start;
+			text-align: center;
+			padding: 8px;
+			line-height: normal;
+			display: inline-block;
+			margin: 0 auto 10px;
+			background: #d8e187;
+			border: 1px solid #f3ff83;
+			color: #252424;
+			@media (min-width: 1024px) {
+				font-size: 1.4em;
+			}
+			@media (min-width: 2000px) {
+				font-size: 35px;
+				padding: 16px;
+			}
+  	}
+  	&:nth-child(odd) {
+  		background: $secondary;
+  	}
+  	&:nth-child(even) {
+  		background: $primary;
+  	}
+  }
+  @media (min-width: 1024px) {
+  	font-size: 14px;
+  }
+  @media (min-width: 1440px) {
+  	font-size: 16px;
+  }
+  @media (min-width: 2000px) {
+  	font-size: 18px;
+  }
+}
+#index > section {
+  min-height: 100vh;
+}

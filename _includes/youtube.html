@@ -1,0 +1,9 @@
+{% if include.width != '' %}
+  <div style="width: {{ include.width }}; margin:0 auto;" class="yt-resp">
+{% else %}
+  <div>
+{% endif %}
+  <div class="ytcontainer">
+    <iframe class="yt" width="560" height="315" frameborder="0" allowfullscreen src="https://www.youtube.com/embed/{{ include.id }}"></iframe>
+  </div>
+</div>
