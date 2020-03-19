@@ -1,0 +1,37 @@
+- name: Cube Cube
+  page-link: /cube-cube
+  image-path: /assets/icons/games/cube-cube.jpg
+  image-alt: Cubes
+  ios-dl: https://esportsmedium.com/cube-cube-ios-download
+  android-dl: https://esportsmedium.com/cube-cube-samsung-download
+  
+- name: Bubble Shooter Tournaments
+  page-link: /bubble-shooter-tournaments
+  image-path: /assets/icons/games/bubble-shooter-tournaments.png
+  image-alt: Colorful bubbles
+  ios-dl: https://esportsmedium.com/bubble-shooter-ios-download
+  
+- name: Dominoes Gold
+  page-link: /dominoes-gold
+  image-path: /assets/icons/games/dominoes-gold.png
+  image-alt: Golden dominoes
+  ios-dl: https://esportsmedium.com/dominoes-gold-ios-download
+  
+- name: Pro Pool – Ultimate 8 Ball
+  page-link: /pro-pool-ultimate-8-ball
+  image-path: /assets/icons/games/pro-pool-ultimate-8-ball.png
+  image-alt: Billiards
+  ios-dl: https://esportsmedium.com/real-money-pool-ios-download
+  
+- name: Solitaire Cube
+  page-link: /solitaire-cube
+  image-path: /assets/icons/games/solitaire-cube.png
+  image-alt: Solitaire cards
+  ios-dl: https://esportsmedium.com/solitaire-cube-ios-download
+
+- name: Strike! eSports Bowling
+  page-link: /strike-esports-bowling
+  image-path: /assets/icons/games/strike-esports-bowling.png
+  image-alt: Bowling pins
+  ios-dl: https://esportsmedium.com/strike-esports-bowling-ios-download
+  android-dl: https://esportsmedium.com/strike-esports-bowling-samsung-download
