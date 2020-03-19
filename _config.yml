@@ -9,7 +9,7 @@ title: eSports Medium
 description: >- 
   Win real money by playing mobile games and watching YouTube videos. Join eSports Medium, your Skillz games companion!
 exclude: [brief.md]
-include: ["_redirects", "_headers", "robots.txt"]
+include: ["_redirects", "_headers", "robots.txt", "uploads"]
 sass:
   style: compressed
 defaults:
