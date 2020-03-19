@@ -1,0 +1,27 @@
+backend:
+  name: git-gateway
+  branch: master
+  
+# This line should *not* be indented
+media_folder: "uploads" # Media files will be stored in the repo under images/uploads
+
+# Displays link to main site in backend
+display_url: https://mikeyslice.com
+
+collections:   
+  - name: "pages"
+    label: "Pages"
+    delete: false
+    description: >
+      You can only edit the website pages here.
+    files:
+      - label: "Skillz Games Page"
+        name: "skillz-games"
+        file: "_data/games.yml"
+        fields:
+          - {label: Game Name, name: name, widget: string}
+          - {label: Page Link, name: page-link, widget: string}
+          - {label: "Game Logo", name: "image-path", widget: string}
+          - {label: "Logo Alt Tag", name: "image-alt", widget: string}
+          - {label: "iOS Download Link", name: "ios-dl", widget: string}
+          - {label: "Android Download Link", name: "android-dl", widget: string}
