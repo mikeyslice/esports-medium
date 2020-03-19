@@ -1,3 +1,4 @@
 User-agent: * 
-Disallow:
+Disallow: /thank-you/
+Disallow: /submitted/
 Sitemap: https://esportsmedium.com/sitemap.xml

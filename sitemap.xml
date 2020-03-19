@@ -3,12 +3,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     {% for post in site.posts %}
+    {% unless page.sitemap.exclude == "yes" %}	
     <url>
         <loc>{{site.url}}{{ post.url | remove: 'index.html' }}</loc>
     </url>
+    {% endunless %}
     {% endfor %}
 
     {% for page in site.pages %}
+    {% unless page.sitemap.exclude == "yes" %}	
     {% if page.layout != nil %}
     {% if page.layout != 'feed' %}
     <url>
@@ -16,5 +19,6 @@
     </url>
     {% endif %}
     {% endif %}
+    {% endunless %}
     {% endfor %}
 </urlset>
