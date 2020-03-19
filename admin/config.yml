@@ -19,9 +19,12 @@ collections:
         name: "skillz-games"
         file: "_data/games.yml"
         fields:
-          - {label: Game Name, name: name, widget: string}
-          - {label: Page Link, name: page-link, widget: string}
-          - {label: "Game Logo", name: "image-path", widget: string}
-          - {label: "Logo Alt Tag", name: "image-alt", widget: string}
-          - {label: "iOS Download Link", name: "ios-dl", widget: string}
-          - {label: "Android Download Link", name: "android-dl", widget: string}
+          - label: Game Name
+            name: name
+            widget: object
+            fields:
+				      - {label: Game Page Link, name: page-link, widget: string, hint: "ie: /cube-cube"}
+				      - {label: "Game Logo", name: "image-path", widget: string, hint: "ie: /assets/icons/games/cube-cube.jpg"}
+				      - {label: "Logo Alt Tag", name: "image-alt", widget: string, hint: "ie: Cube Cube"}
+				      - {label: "iOS Download Link", name: "ios-dl", widget: string, hint: "ie: https://esportsmedium.com/cube-cube-ios-download"}
+				      - {label: "Android Download Link", name: "android-dl", widget: string, hint: "ie: https://esportsmedium.com/cube-cube-samsung-download"}
