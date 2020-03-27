@@ -1,6 +1,6 @@
 <div class="yt-grid">
 <!--{% assign videos = site.data.videos | where: "cat", "hunt" %}-->
-{% for video in site.data.videos | limit: 10 %}
+{% for video in site.data.new-videos | limit: 10 %}
 <div class="yt-wrap">
   <div class="ytcontainer">
     <iframe class="yt" width="560" height="315" frameborder="0" allowfullscreen src="https://www.youtube.com/embed/{{ video.id }}"></iframe>

@@ -21,4 +21,3 @@ collections:
         file: "_includes/pages/skillz-match-codes.html"
         fields:
           - {label: "Content", name: "body", widget: "markdown", hint: "Page content goes here."}
-
