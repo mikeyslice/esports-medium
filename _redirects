@@ -3,6 +3,7 @@
 
 # Redirect default Netlify subdomain to primary domain
 https://esportsmedium.netlify.com/* https://esportsmedium.com/:splat 301!
+https://esportsmedium.netlify.app/* https://esportsmedium.com/:splat 301!
 
 # Natural
 
