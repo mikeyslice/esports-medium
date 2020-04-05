@@ -1,6 +1,9 @@
 <header>
 	{% include navigation.html %}
 	<div class="content-wrapper">
+	{% unless page.url contains "/blog/" %}
+	<div class="ann"><a href="https://www.kickstarter.com/projects/mikeyslice/mikeyslice-hybrid-mobile-app?ref=aqp0a2" title="Mobile App Kickstarter" target="_blank"> <span class="hide"><sup><b>NEW!</b></sup> <u>Kickstarter</u> </span></a></div>
+	{% endunless %}
 	<h1>{{ page.title }}</h1>
 	{% if page.url == "/404" %}
 	<h2>Looking for the <a href="/">homepage</a>?</h2>
