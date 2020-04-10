@@ -10,7 +10,7 @@
 	{% if page.url == "/" %}
 	<title>{{ site.title }} - {% if page.title %}{{ page.title | truncate: 60 }}{% endif %}</title>
 	{% else %}
-  <title>{% if page.title %}{{ page.title | truncate: 60 }} - {% endif %}{{ site.title }}</title>
+  <title>{% if page.title %}{{ page.title | truncate: 60 }} {% endif %}{% if page.title-long %} - {{ page.title-long }}{% endif %} - {{ site.title }}</title>
   {% endif %}
   {% endunless %}
   <!-- Meta Description -->
