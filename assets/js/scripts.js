@@ -61,8 +61,8 @@ $(document).ready(function () {
         },
         onContinue:function (){
             $count++;
-            (($count >= 1 && $count < 2) ? $level = $levels[1] : 
-            (($count >= 2 && $count < 30) ? $level = $levels[2] : 
+            (($count >= 10 && $count < 20) ? $level = $levels[1] : 
+            (($count >= 20 && $count < 30) ? $level = $levels[2] : 
             (($count >= 30 && $count < 40) ? $level = $levels[3] :
             (($count >= 40 && $count < 50) ? $level = $levels[4] :
             (($count >= 50 && $count < 60) ? $level = $levels[5] :
@@ -111,13 +111,13 @@ $(document).ready(function () {
             //$(".end #counter").html($count + ' pts');
             $(".main #level").html(1);
             $(".main #counter").html(0);
-            if( $level >= 2 ) {
+            if( $level >= 4 ) {
             $("#sysmsg").text('Code found!');
             $(".smc-img").removeClass("hidden");
             $(".buy").addClass("hidden");
             $(".tips").removeClass("hidden");
             $("#smc").removeClass("hidden").text(smc[Math.floor(Math.random() * smc.length)].crypt_symmetric());
-            }else if ( $level < 2 ) {
+            }else if ( $level < 4 ) {
             $("#sysmsg").text('Unlucky, try again!');
             }
         }
