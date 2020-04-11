@@ -396,7 +396,8 @@ body {
 	background: #d8e187 !important;
 	border: 1px solid #f3ff83 !important;
 	color: #171616 !important;
-	margin: 20px;
+	margin-top: 20px;
+	font-size: 18px;
 }
 @-webkit-keyframes flash {
  0%,
@@ -462,6 +463,9 @@ body {
 	.start .header p{
 		padding: 30px;
 		font-size: 20px;
+	}
+	.animated {
+		font-size: 1em;
 	}
 }
 #fullvh {
