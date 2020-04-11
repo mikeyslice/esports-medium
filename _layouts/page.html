@@ -2,8 +2,12 @@
 <html lang="en-US">
 	<head>
 	{% include head.html %}
+	{% if page.url == "/play/" %}
+	<script src="/assets/js/jquery-3.4.1.min.js"></script>
+	<script src="/assets/js/scripts.js"></script>
+	{% endif %}
 	</head>
-	<body>
+	<body {% if page.url == "/play/" %}class="start_ON withButton_ON"{% endif %}>
 	{% include header-page.html %}
 	<section class="content-section">
 	{% if page.url == "/skillz-games/" %}
@@ -31,6 +35,8 @@
 	{% include pages/skillz-promo-code.html %}
 	{% elsif page.url == "/skillz-match-codes/" %}
 	{% include pages/skillz-match-codes.html %}
+	{% elsif page.url == "/play/" %}
+	{% include pages/play.html %}
 	{% elsif page.url == "/privacy-policy/" %}
 	{{ content }}
 	{% elsif page.url == "/terms-and-conditions/" %}

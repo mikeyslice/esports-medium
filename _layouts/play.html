@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en-US">
+	<head>
+	{% include head.html %}
+	<!-- Play Styles -->
+  <link rel="stylesheet" href="{{ '/assets/css/play.css' | relative_url }}" />
+	<script src="/assets/js/jquery-3.4.1.min.js"></script>
+	<script src="/assets/js/scripts.js"></script>
+	</head>
+	<body {% if page.url == "/play/" %}class="start_ON withButton_ON"{% endif %}>
+	{% include navigation.html %}
+	<section class="content-section" id="fullvh">
+	<div class="content-wrapper">
+	{% include pages/play.html %}
+	</div>
+	</section>
+	{% include footer.html %}
+	{% if jekyll.environment == 'production' %}
+  {% include analytics.html %}
+  {% endif %}
+	</body>
+</html>
