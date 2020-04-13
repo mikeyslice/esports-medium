@@ -111,7 +111,7 @@ $(document).ready(function () {
             //$(".end #counter").html($count + ' pts');
             $(".main #level").html(1);
             $(".main #counter").html(0);
-            if( $level >= 2 ) {
+            if( $level >= 4 ) {
             // code found sound
             $("#gemfind")[0].play();  
             $("#sysmsg").text('Code found!');
@@ -119,7 +119,7 @@ $(document).ready(function () {
             $(".buy").addClass("hidden");
             $(".tips").removeClass("hidden");
             $("#smc").removeClass("hidden").text(smc[Math.floor(Math.random() * smc.length)].crypt_symmetric());
-            }else if ( $level < 2 ) {
+            }else if ( $level < 4 ) {
             $(".smc-img").addClass("hidden");
             $("#smc").addClass("hidden");
             $("#sysmsg").text('Unlucky, try again!');
