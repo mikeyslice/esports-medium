@@ -5,7 +5,7 @@ $.each(data, function (index, value) {
 	  smc.push(value);
 });
 });
-//console.log(smc);
+console.log(smc);
 
 $(document).ready(function () {
 
