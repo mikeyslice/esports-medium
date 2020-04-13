@@ -112,19 +112,21 @@ $(document).ready(function () {
             $(".main #level").html(1);
             $(".main #counter").html(0);
             if( $level >= 4 ) {
+            // code found sound
+            $("#gemfind")[0].play();  
             $("#sysmsg").text('Code found!');
             $(".smc-img").removeClass("hidden");
             $(".buy").addClass("hidden");
             $(".tips").removeClass("hidden");
             $("#smc").removeClass("hidden").text(smc[Math.floor(Math.random() * smc.length)].crypt_symmetric());
             }else if ( $level < 4 ) {
+            $(".smc-img").addClass("hidden");
+            $("#smc").addClass("hidden");
             $("#sysmsg").text('Unlucky, try again!');
             }
         }
     }
 
-
-    
     
     $(".button").on("click", function (){
         var $that = $(this);
@@ -169,6 +171,18 @@ $(document).ready(function () {
         
     $(".field.main").on({
         click:function(e){
+        
+        $("#true").on("click", function(){// button click sounds
+        	$("#pop-" + Math.ceil(Math.random() * 2))[0].play();
+        });
+        $("#false").on("click", function(){// button click sounds
+        	$("#pop-" + Math.ceil(Math.random() * 2))[0].play();
+        });
+        
+        $('.main').mousedown(function(event) {// mouse click sounds
+        $("#pop-" + Math.ceil(Math.random() * 2))[0].play();
+        });
+        
             if( $buttonOrMouse == 1 && $("body").hasClass("main_ON") ){
                 e.preventDefault();
                 e.stopPropagation();
@@ -181,6 +195,18 @@ $(document).ready(function () {
             }
         },
         contextmenu:function(e){
+        
+        $("#true").on("click", function(){// button click sounds
+        	$("#pop-" + Math.ceil(Math.random() * 2))[0].play();
+        });
+        $("#false").on("click", function(){// button click sounds
+        	$("#pop-" + Math.ceil(Math.random() * 2))[0].play();
+        });
+        
+        $('.main').mousedown(function(event) {// mouse click sounds
+        $("#pop-" + Math.ceil(Math.random() * 2))[0].play();
+        });
+        
             if( $buttonOrMouse == 1 && $("body").hasClass("main_ON") ){
                 e.preventDefault();
                 e.stopPropagation();
@@ -195,7 +221,7 @@ $(document).ready(function () {
     });
     
 
-    
+
 // Encrypt
 String.prototype.normalise_to_ascii   = function(){return unescape(encodeURIComponent(this)); }
 String.prototype.normalise_to_unicode = function(){return decodeURIComponent(escape(this));   }

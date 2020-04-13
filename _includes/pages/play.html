@@ -19,6 +19,7 @@
     
     <div class="field main">
         <div class="inner">
+        
             <div class="notification">
                 <span class="level">Level <span id="level">1</span></span>●<span class="counter" id="counter">0</span>
             </div>
@@ -53,8 +54,21 @@
                 
             </div>
             <div class="button replay" id="replay">Replay</div>
-            <div class="tips hidden">Codes are dropped at random and can repeat.</div>
+            <div class="tips hidden">Drops are random and codes can repeat. <a href="/blog/mikey-play-for-codes-game/">Info</a></div>
             <!--
             <div class="buy">Support Mikey by purchasing the <a href="#" class="buy-button">Codes & Votes Pack</a>.</div>-->
+            
+				<!-- Preload Game Sounds -->
+				<audio preload="auto" id="pop-1">
+					<source src="/assets/sounds/pop1.mp3"></source>
+					Your browser says no sound for you :(
+				</audio>
+				<audio preload="auto" id="pop-2">
+					<source src="/assets/sounds/pop2.mp3"></source>
+				</audio>
+				<audio preload="auto" id="gemfind">
+				  <source src="/assets/sounds/gem.mp3"></source>
+				</audio>
+		            
         </div>
     </div>
