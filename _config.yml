@@ -23,4 +23,4 @@ plugins:
   - jekyll-paginate
 paginate: 5
 syntax-highlight: True
-
+kickstarter: disabled
