@@ -122,10 +122,15 @@ $(document).ready(function () {
             }else if ( $timer >= 100 ) {
             $("#smc").addClass("hidden");
             $("#sysmsg").text('Too slow, try again?');
-            }else if ( $level < 4 && $timer < 100 ) {
+            }else if ( $level < 4 && $timer < 100 && $toResult !== ($toFirst+$toSecond)) {
             $(".smc-img").addClass("hidden");
             $("#smc").addClass("hidden");
-            $("#sysmsg").text('Wrong answer, try again?');
+            $("#sysmsg").text('Oops.. ' + $toFirst + ' + ' + $toSecond + ' = ' + $toResult + ' was FALSE');
+            }
+            else if ( $level < 4 && $timer < 100 && $toResult === ($toFirst+$toSecond)) {
+            $(".smc-img").addClass("hidden");
+            $("#smc").addClass("hidden");
+            $("#sysmsg").text('Oops.. ' + $toFirst + ' + ' + $toSecond + ' = ' + $toResult + ' was TRUE');
             }
         }
     }
