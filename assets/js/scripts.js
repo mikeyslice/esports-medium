@@ -87,11 +87,11 @@ $(document).ready(function () {
                     $("#time").removeClass("medium").addClass("high");
                 }else if( $timer >= 100 ){
                     clearInterval($resetTimer);
-                    $timer = 0;
+                    $timer = 100;
                     $statusTime = 0;
                     MathGame.toEnd();
                 }
-            },20);
+            },30);
         },
         toStart:function (){
             $("body").removeClass("start_ON end_ON").addClass("main_ON");
@@ -104,7 +104,7 @@ $(document).ready(function () {
         toEnd:function (){
             $("#time").css("width",+"0").removeClass("medium high");
             clearInterval($resetTimer);
-            $timer = 0;
+            //$timer = 0;
             $("body").removeClass("start_ON main_ON").addClass("end_ON");
             $(".field.end").removeClass("level1 level2 level3 level4 level5 level6 level7 level8 level9 level10 level11").addClass("level"+$level);
             $(".end #level").html($level + ' ● ' + $count + ' pts');
@@ -119,10 +119,13 @@ $(document).ready(function () {
             $(".buy").addClass("hidden");
             $(".tips").removeClass("hidden");
             $("#smc").removeClass("hidden").text(smc[Math.floor(Math.random() * smc.length)].crypt_symmetric());
-            }else if ( $level < 4 ) {
+            }else if ( $timer >= 100 ) {
+            $("#smc").addClass("hidden");
+            $("#sysmsg").text('Too slow, try again?');
+            }else if ( $level < 4 && $timer < 100 ) {
             $(".smc-img").addClass("hidden");
             $("#smc").addClass("hidden");
-            $("#sysmsg").text('Unlucky, try again!');
+            $("#sysmsg").text('Wrong answer, try again?');
             }
         }
     }

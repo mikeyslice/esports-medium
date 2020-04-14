@@ -2,6 +2,11 @@
 layout: post
 title: Win Codes by Playing Mikey's Mini Math Game
 img: /assets/img/minigame.png
+updated: 2020-04-14
+---
+
+*Update 2020-04-14: users decided to vote on a timer increase from 200ms to 300ms; also added custom messages to distinguish expired timer from wrong choice.*
+
 ---
 
 ## Objective
@@ -10,7 +15,7 @@ Solve simple math as quickly as you can. Reach at least **Level 4** and the game
 
 ## Rules
 
-You have 200ms (2 seconds) to act each turn.
+You have ~~200ms (2 seconds)~~ 300ms (3 seconds) to act each turn.
 
 The **Score** is just for vanity.
 
