@@ -1,55 +1,49 @@
-// Get Date
-var getDaysArray = function(start, end) {
-    for(var arr=[],dt=new Date(start); dt<=end; dt.setDate(dt.getDate()+1)){
-        arr.push(new Date(dt));
-    }
-    return arr;
-};
-var calendar = getDaysArray(new Date("2020-04-15"),new Date("2020-05-15"));
-calendar.map((v)=>v.toISOString().slice(0,10)).join("")
-console.log(calendar);
+// Store today's date
+const today = new Date();
+var arr = [];
+// Define milliseconds per day
+const msPerDay = 1000*60*60*24;
 
+// *** Test future date
+//const today = getDateByOffset(1);
 
-var smc = [];
-var today = new Date();
-
-function isToday(dateParameter) {
-        
-        return dateParameter.getDate() === today.getDate() && dateParameter.getMonth() === today.getMonth() && dateParameter.getFullYear() === today.getFullYear();
+// Get difference (in days) between two dates
+function getDiffInDays(date1, date2){
+    // `|0` is same as Math.floor(...)
+    return ((date2.getTime() - date1.getTime())/msPerDay)|0;
 }
-console.log(new Date());
-
-if( isToday(new Date()) === isToday(new Date(calendar[0])) ){                
-$.getJSON("/assets/js/200415.json", function (data) {
-
-$.each(data, function (index, value) {
-      smc.push(value);
-});
-});
-}else if( isToday(new Date()) === isToday(new Date(calendar[1])) ){                
-$.getJSON("/assets/js/200416.json", function (data) {
-
-$.each(data, function (index, value) {
-      smc.push(value);
-});
-});
-}else if( isToday(new Date()) === isToday(new Date(calendar[2])) ){                
-$.getJSON("/assets/js/200417.json", function (data) {
-
-$.each(data, function (index, value) {
-      smc.push(value);
-});
-});
+// Get date by offset in days (Useful for testing tomorrow's date and so on)
+function getDateByOffset(days=0){
+    const today = new Date();
+    return new Date((today.getTime()/msPerDay + days)*msPerDay);
 }
 
-console.log(smc);
+// Get offset index for the json file
+function getIndex(){
+    // Define the starting date for "file-1.json"
+    const startDate = new Date(Date.parse('4/16/2020'));
+    // Will range from 1 instead of 0
+    return getDiffInDays(startDate, today) + 1;
+}
+new Promise(resolve=>{
+    // Get the json file based on the offset
+    $.getJSON(`/assets/js/data-${getIndex()}.json`, resolve);
+})
+.then(json=>{
+    // Add it to the `arr` array
+    arr = [...arr,...json];
+})
+.then(()=>{
+    //console.log(arr);
+    //console.log(today);
+    //$("#show").text(arr[Math.floor(Math.random() * arr.length)]);
+})
 
-
+// Begin
 
 $(document).ready(function () {
 		
-		
-    var $levels = [1,2,3,4,5,6,7,8,9,10,11],
+    var $levels = [1,2,3,4,5,6,7,8,9,10],
         $level = $levels[0],
         $count = 0,
         $first = $("#first"),
@@ -63,37 +57,39 @@ $(document).ready(function () {
         $resetTimer,
         $timer = 0,
         $buttonOrMouse = 0; //0-button,1-mouse
-   
+        $difficulty = [4,5,6];
+        $stash = [100,105,110,115,120,125,130,135,140,145,150]; //WTA
+        
     var MathGame = {
         assignNumber:function (){
         
             $change = Math.floor((Math.random() * 10 ) + 1 );
            
             $toFirst = Math.floor((Math.random() * 10) + 
-            ($level === $levels[1] ? 10 : 
-            ($level === $levels[2] ? 20 : 
-            ($level === $levels[3] ? 30 :
-            ($level === $levels[4] ? 40 :
-            ($level === $levels[5] ? 50 :
-            ($level === $levels[6] ? 60 :
-            ($level === $levels[7] ? 70 :
-            ($level === $levels[8] ? 80 :
-            ($level === $levels[9] ? 90 :
-            ($level === $levels[10] ? Math.floor((Math.random() * $count )) : 1)))))))))) );
+            ($level === $levels[0] ? 10 : 
+            ($level === $levels[1] ? 20 : 
+            ($level === $levels[2] ? 30 :
+            ($level === $levels[3] ? 40 :
+            ($level === $levels[4] ? 50 :
+            ($level === $levels[5] ? 60 :
+            ($level === $levels[6] ? 70 :
+            ($level === $levels[7] ? 80 :
+            ($level === $levels[8] ? 90 :
+            ($level === $levels[9] ? Math.floor((Math.random() * $count )) : 1)))))))))) );
             
             $toSecond = Math.floor((Math.random() * 10 ) + 
-            ($level === $levels[1] ? 10 : 
-            ($level === $levels[2] ? 20 : 
-            ($level === $levels[3] ? 30 : 
-            ($level === $levels[4] ? 40 : 
-            ($level === $levels[5] ? 50 :
-            ($level === $levels[6] ? 60 :
-            ($level === $levels[7] ? 70 :
-            ($level === $levels[8] ? 80 :
-            ($level === $levels[9] ? 90 :
-            ($level === $levels[10] ? Math.floor((Math.random() * $count )) : 1)))))))))) );
+            ($level === $levels[0] ? 10 : 
+            ($level === $levels[1] ? 20 : 
+            ($level === $levels[2] ? 30 : 
+            ($level === $levels[3] ? 40 : 
+            ($level === $levels[4] ? 50 :
+            ($level === $levels[5] ? 60 :
+            ($level === $levels[6] ? 70 :
+            ($level === $levels[7] ? 80 :
+            ($level === $levels[8] ? 90 :
+            ($level === $levels[9] ? Math.floor((Math.random() * $count )) : 1)))))))))) );
             
-            $toResult = (($change === 1 || $change === 2) ? ($toFirst+$toSecond) : Math.floor((Math.random() * 11 ) + ($toFirst+$toSecond+1) ) );
+            $toResult = (($change === 1 || $change === 2) ? ($toFirst+$toSecond) : Math.floor((Math.random() * 10 ) + ($toFirst+$toSecond+1) ) );
 
             $first.html($toFirst);
             $second.html($toSecond);
@@ -101,16 +97,16 @@ $(document).ready(function () {
         },
         onContinue:function (){
             $count++;
+            (($count >= 0 && $count < 10) ? $level = $levels[0] : 
             (($count >= 10 && $count < 20) ? $level = $levels[1] : 
-            (($count >= 20 && $count < 30) ? $level = $levels[2] : 
+            (($count >= 20 && $count < 30) ? $level = $levels[2] :
             (($count >= 30 && $count < 40) ? $level = $levels[3] :
             (($count >= 40 && $count < 50) ? $level = $levels[4] :
             (($count >= 50 && $count < 60) ? $level = $levels[5] :
             (($count >= 60 && $count < 70) ? $level = $levels[6] :
             (($count >= 70 && $count < 80) ? $level = $levels[7] :
             (($count >= 80 && $count < 90) ? $level = $levels[8] :
-            (($count >= 90 && $count < 100) ? $level = $levels[9] :
-            ($count >= 100 ? $level = $levels[10] : 
+            ($count >= 90 ? $level = $levels[9] : 
             $level = $levels[0] ) ) ) ) ) ) ) ) ) )
             $(".main #level").html($level);
             $(".main #counter").html($count + ' pts');
@@ -134,22 +130,23 @@ $(document).ready(function () {
             },30);
         },
         toStart:function (){
-        		if (smc && smc.length) {
+        		if (arr && arr.length) {
 								// array and array.length are truthy
 								// ⇒ probably OK to process array
 								$("body").removeClass("start_ON end_ON").addClass("main_ON");
+								$("#expiry").addClass('hidden');
 				        $statusTime = 1;
 				        $count = 0;
 				        $level = $levels[0];
 				        clearInterval($resetTimer);
 				        $timer = 0;
-								console.log("array has codes");
-						}else if (!smc || !smc.length) {
+								//console.log("codes available");
+						}else if (!arr || !arr.length) {
 											// array or array.length are falsy
 											// ⇒ do not attempt to process array
 											$("#start").addClass("hidden");
 											$("#stopped").removeClass("hidden");
-											console.log("sorry, no codes");
+											//console.log("codes not available");
 						};
             
         },
@@ -158,30 +155,58 @@ $(document).ready(function () {
             clearInterval($resetTimer);
             //$timer = 0;
             $("body").removeClass("start_ON main_ON").addClass("end_ON");
-            $(".field.end").removeClass("level1 level2 level3 level4 level5 level6 level7 level8 level9 level10 level11").addClass("level"+$level);
+            $(".field.end").removeClass("level1 level2 level3 level4 level5 level6 level7 level8 level9 level10").addClass("level"+$level);
             $(".end #level").html($level + ' ● ' + $count + ' pts');
             //$(".end #counter").html($count + ' pts');
             $(".main #level").html(1);
             $(".main #counter").html(0);
-            if( $level >= 2 ) {
-            // code found sound
+            if( $count >= $stash[Math.floor(Math.random() * $stash.length)] ) {
             $("#gemfind")[0].play();  
-            $("#sysmsg").text('Code found!');
+            $("#sysmsg").text('Code Stash found!');
+            $("#expiry").removeClass('hidden');
             $(".smc-img").removeClass("hidden");
             $(".buy").addClass("hidden");
             $(".tips").removeClass("hidden");
-            $("#smc").removeClass("hidden").text(smc[Math.floor(Math.random() * smc.length)].crypt_symmetric());
+            $("#smc").removeClass("hidden").text(arr[0].crypt_symmetric());
+            $("#smc-2").removeClass("hidden").text(arr[1].crypt_symmetric());
+            $("#smc-3").removeClass("hidden").text(arr[2].crypt_symmetric());
+            $("#smc-4").removeClass("hidden").text(arr[3].crypt_symmetric());
+            $("#smc-5").removeClass("hidden").text(arr[4].crypt_symmetric());
+            }else if( $level >= $difficulty[Math.floor(Math.random() * $difficulty.length)] ) {
+            // code found sound
+            $("#gemfind")[0].play();  
+            $("#sysmsg").text('Code found!');
+            $("#expiry").removeClass('hidden');
+            $(".smc-img").removeClass("hidden");
+            $(".buy").addClass("hidden");
+            $(".tips").removeClass("hidden");
+            $("#smc").removeClass("hidden").text(arr[Math.floor(Math.random() * arr.length)].crypt_symmetric());
             }else if ( $timer >= 100 ) {
             $("#smc").addClass("hidden");
+            $("#smc-2").addClass("hidden");
+            $("#smc-3").addClass("hidden");
+            $("#smc-4").addClass("hidden");
+            $("#smc-5").addClass("hidden");
             $("#sysmsg").text('Too slow, try again?');
-            }else if ( $level < 2 && $timer < 100 && $toResult !== ($toFirst+$toSecond)) {
+            $(".tips").removeClass("hidden").text('Drop chance at Levels 4 & 5: 33%. Level 6+: 100%.');
+            }else if ( $level < $difficulty[Math.floor(Math.random() * $difficulty.length)] && $timer < 100 && $toResult !== ($toFirst+$toSecond)) {
             $(".smc-img").addClass("hidden");
             $("#smc").addClass("hidden");
+            $("#smc-2").addClass("hidden");
+            $("#smc-3").addClass("hidden");
+            $("#smc-4").addClass("hidden");
+            $("#smc-5").addClass("hidden");
+            $(".tips").removeClass("hidden").text('Drop chance at Levels 4 & 5: 33%. Level 6+: 100%.');
             $("#sysmsg").text('Oops.. ' + $toFirst + ' + ' + $toSecond + ' = ' + $toResult + ' was FALSE');
             }
-            else if ( $level < 2 && $timer < 100 && $toResult === ($toFirst+$toSecond)) {
+            else if ( $level < $difficulty[Math.floor(Math.random() * $difficulty.length)] && $timer < 100 && $toResult === ($toFirst+$toSecond)) {
             $(".smc-img").addClass("hidden");
             $("#smc").addClass("hidden");
+            $("#smc-2").addClass("hidden");
+            $("#smc-3").addClass("hidden");
+            $("#smc-4").addClass("hidden");
+            $("#smc-5").addClass("hidden");
+            $(".tips").removeClass("hidden").text('Code Stash located between 100 and 150 Points.');
             $("#sysmsg").text('Oops.. ' + $toFirst + ' + ' + $toSecond + ' = ' + $toResult + ' was TRUE');
             }
         }
@@ -214,9 +239,6 @@ $(document).ready(function () {
         
     });
     
-    
-
-
     $("#withButton").on("click", function(){// button is active
         $("body").removeClass("withButton_ON").addClass("withMouse_ON");
         $buttonOrMouse = 1;
@@ -276,9 +298,6 @@ $(document).ready(function () {
             }
         }
     });
-    
-
-
 
 
 // Encrypt
@@ -296,8 +315,6 @@ String.prototype.crypt_symmetric = function(key){
          ;
   me = String.fromCharCode.apply(undefined, me);                  //one-liner trick: array-of-numbers to array-of-characters (ASCII value), join to single string. may result in buffer-overflow on long string!
   return me;
-};    
-    
-
+};   
 
 });

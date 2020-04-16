@@ -397,7 +397,8 @@ body {
 	border: 1px solid #f3ff83 !important;
 	color: #171616 !important;
 	margin-top: 20px;
-	font-size: 18px;
+	font-size: 16px;
+	letter-spacing: 1px;
 }
 @-webkit-keyframes flash {
  0%,
@@ -465,9 +466,17 @@ body {
 		font-size: 20px;
 	}
 	.animated {
-		font-size: 1em;
+		font-size: 0.8em;
+		letter-spacing: 2px;
 	}
 }
 #fullvh {
 	min-height: 100vh;
+}
+#stopped {
+	color: #dbff00;
+}
+#expiry {
+  font-size: 16px;
+  font-weight: 100;
 }
