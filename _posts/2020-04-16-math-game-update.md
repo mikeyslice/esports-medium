@@ -22,10 +22,10 @@ In this version:
 
 Each day Mikey will activate 5 new event codes, one per game.
 
-It's easy to find which game the code is for by looking for the [BAT, CC, DG, SC, SEB] letters or the ending number:
+It's easy to find which game the code is for by looking for the [BST, CC, DG, SC, SEB] letters or the ending number:
 
 
-- **Bubble Shooter Tournaments** `MIKEYSLICEBAT*****01`
+- **Bubble Shooter Tournaments** `MIKEYSLICEBST*****01`
 
 - **Cube Cube** `MIKEYSLICECC*****02`
 
