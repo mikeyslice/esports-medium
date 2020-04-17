@@ -480,3 +480,12 @@ body {
   font-size: 16px;
   font-weight: 100;
 }
+#clock {
+  //font-variant: super;
+  //text-transform: full-width;
+  font-family: monospace;
+  position: relative;
+  top: 20px;
+  z-index: 999;
+  color: #ccf0f0;
+}

@@ -2,6 +2,11 @@
 layout: post
 title: MMM Game Version 2 Update
 img: /assets/img/code-test.png
+updated: 2020-04-17
+---
+
+*Update 2020-04-17: added game clock and specified server timezone.*
+
 ---
 
 ## Mikey's Mini Math Game v2 Change Log
@@ -57,10 +62,13 @@ If you reach **Level 10** you *could* get the ultimate drop in one single run: *
 This can drop within this **Score** range: 100 - 150 Points, so keep going as far as you can to increase your chances.
 
 
-## Codes Expiry
+## Codes Expiry & Reset
 
 Codes have a validity of 7 days, so they will expire in 1 week.
 
+Codes will reset daily at 00:00 UTC GMT+0000 (Coordinated Universal Time). 
+
+If you missed today's codes you will have the option to purchase them in a future site update, as soon as the store is deployed.
 
 
 ## Play
