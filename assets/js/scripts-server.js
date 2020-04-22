@@ -18,26 +18,36 @@ function getDateByOffset(days=0){
     return new Date((today.getTime()/msPerDay + days)*msPerDay);
 }
 
-// Get offset index for the json file
-function getIndex(){
-    // Define the starting date for "file-1.json"
+// Modify the getIndex function to receive today's date instead
+function getIndex(today){
     const startDate = new Date(Date.parse('4/16/2020'));
-    // Will range from 1 instead of 0
-    return getDiffInDays(startDate, today) + 1;
+    const offset = getDiffInDays(startDate, today) + 1;
+    return offset;
+}   
+// Get date from server
+function getServerDate(){
+    // Bypass Cross-Origin Request (CORs)
+    return fetch(`https://cors-anywhere.herokuapp.com/https://bluexpress.netlify.app/.netlify/functions/server/getdate`)
+    // Convert response to json
+    .then(res=>res.json())
+    // Get the datetime from object and create a Date object
+    .then(({date})=>new Date(Date.parse(date)))
+    // Get json index based on the date
+    .then(getIndex);
 }
-new Promise(resolve=>{
-    // Get the json file based on the offset
-    $.getJSON(`/assets/js/data-${getIndex()}.json`, resolve);
-})
+
+// Get today's date from server
+getServerDate()
+.then(index=>new Promise(resolve=>{
+    // Get the json file based on the index returned
+    $.getJSON(`/assets/js/data-${index}.json`, resolve);
+}))
 .then(json=>{
+    // Append to arr and whatever you like here
     // Add it to the `arr` array
     arr = [...arr,...json];
 })
-.then(()=>{
-    //console.log(arr);
-    //console.log(today);
-    //$("#show").text(arr[Math.floor(Math.random() * arr.length)]);
-})
+
 
 // Begin
 
