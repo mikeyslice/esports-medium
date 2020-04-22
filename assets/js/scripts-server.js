@@ -27,7 +27,7 @@ function getIndex(today){
 // Get date from server
 function getServerDate(){
     // Bypass Cross-Origin Request (CORs)
-    return fetch(`https://cors-anywhere.herokuapp.com/https://bluexpress.netlify.app/.netlify/functions/server/getdate`)
+    return fetch('https://cors-anywhere.herokuapp.com/https://bluexpress.netlify.app/.netlify/functions/server/getdate')
     // Convert response to json
     .then(res=>res.json())
     // Get the datetime from object and create a Date object
@@ -46,12 +46,16 @@ getServerDate()
     // Append to arr and whatever you like here
     // Add it to the `arr` array
     arr = [...arr,...json];
+		$("#preload").addClass("hidden");
+		$("#start").removeClass("hidden");
+    
 })
 
 
 // Begin
 
 $(document).ready(function () {
+
 		
     var $levels = [1,2,3,4,5,6,7,8,9,10],
         $level = $levels[0],
