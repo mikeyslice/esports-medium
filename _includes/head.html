@@ -33,6 +33,11 @@
   <!-- Robots -->
   <meta name="robots" content="{{ page.robots }}">
   {% endif %}
+  {% if page.url contains "/shop/" %}
+  <!-- Cart -->
+  <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.0.11/default/snipcart.css" />
+  {% endif %}
+  <!-- Ads -->
 <script data-ad-client="ca-pub-9880027663967930" async 
 src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 

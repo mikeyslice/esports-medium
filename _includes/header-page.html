@@ -26,5 +26,21 @@
 	<img src="{{ page.img }}" class="post-img" title="{{ page.title }}" alt="{{ page.title }}">
 	{% endif %}
 	{% endif %}
+	{% if page.data-item-price %}
+	<br>
+	<span id="price-tag"><sup>$</sup>{{ page.data-item-price }}</span>
+	<button class="btn btn-shop snipcart-add-item"
+		data-item-id="{{ page.data-item-id }}"
+		data-item-price="{{ page.data-item-price }}"
+		data-item-url="{{ page.data-item-url }}"
+		data-item-description="{{ page.data-item-description }}"
+		data-item-image="{{ page.data-item-image }}"
+		data-item-file-guid="{{ page.data-item-file-guid }}"
+		data-item-name="{{ page.data-item-name }}"
+		data-item-max-quantity="{{ page.data-item-max-quantity }}"
+		data-item-shippable="{{ page.data-item-shippable }}">
+		Add to Cart
+	</button>
+	{% endif %}
 	</div>
 </header>

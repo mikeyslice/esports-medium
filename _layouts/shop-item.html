@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en-US">
+	<head>
+	{% include head.html %}
+	{% if page.url == "/play/" %}
+	<script src="/assets/js/jquery-3.4.1.min.js"></script>
+	<script src="/assets/js/scripts.js"></script>
+	{% endif %}
+	</head>
+	<body id="shop-main">
+	{% include header-page.html %}
+	<section class="content-section" id="shop">
+	<img src="{{ page.image }}"/>
+	<div class="content-wrapper">
+	
+	{{ content }}
+	<br><br>
+	<a href="/shop/" class="btn">Back to Shop</a>
+	<br>
+	
+	</div>
+	</section>
+	{% include footer.html %}
+
+	{% if jekyll.environment == 'production' %}
+  {% include analytics.html %}
+  {% endif %}
+  	<div id="snipcart" data-api-key="Zjc1NjdiYmYtYTdjMy00NjFhLTk3OTItOTBmODJjYjBmMWJiNjM3MTczMDQzODY3NzAzMDI5" hidden></div>
+<script src="https://cdn.snipcart.com/themes/v3.0.11/default/snipcart.js"></script>
+	</body>
+</html>
