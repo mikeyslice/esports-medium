@@ -1,0 +1,29 @@
+<span id="timestamp"><em>Shop last updated: {{ page.updated }}</em></span><br><br><br>
+
+<ul id="shop-grid">
+	{% for shop_item in site.shop_items %}
+	<a href="{{ shop_item.url }}">
+		<li class="item">
+			<h2>{{ shop_item.title }}</h2><br>
+			<img src="{{ shop_item.image }}"/>
+			{{ shop_item.description | markdownify }}
+			<span id="price-tag"><sup>$</sup>{{ shop_item.data-item-price }}</span><br>
+			
+			
+			<!--
+			<button class="btn btn-shop snipcart-add-item"
+			data-item-id="{{ shop_item.data-item-id }}"
+			data-item-price="{{ shop_item.data-item-price }}"
+			data-item-url="{{ shop_item.data-item-url }}"
+			data-item-description="{{ shop_item.data-item-description }}"
+			data-item-image="{{ shop_item.data-item-image }}"
+			data-item-file-guid="{{ shop_item.data-item-file-guid }}"
+			data-item-name="{{ shop_item.data-item-name }}">
+			Add to cart
+			</button>
+			-->
+		</li>
+	</a>
+	{% endfor %}
+</ul>
+

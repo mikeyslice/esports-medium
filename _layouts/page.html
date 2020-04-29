@@ -7,7 +7,7 @@
 	<script src="/assets/js/scripts.js"></script>
 	{% endif %}
 	</head>
-	<body {% if page.url == "/play/" %}class="start_ON withButton_ON"{% endif %}>
+	<body {% if page.url == "/play/" %}class="start_ON withButton_ON"{% endif %} {% if page.url contains "/shop/" %}id="shop-main"{% endif %}>
 	{% include header-page.html %}
 	<section class="content-section">
 	{% if page.url == "/skillz-games/" %}
@@ -22,6 +22,8 @@
 	{% include icons/faq/faq.html %}
 	{% elsif page.url == "/skillz-match-codes/" %}
 	{% include icons/skillz-match-codes/skillz-match-codes.html %}
+	{% elsif page.url == "/shop/" %}
+	{% include icons/shop/mikey-shop.html %}
 	{% elsif page.url == "/videos/" %}
 	{% include icons/videos/videos.html %}
 	{% endif %}
@@ -37,6 +39,9 @@
 	{% include pages/skillz-match-codes.html %}
 	{% elsif page.url == "/play/" %}
 	{% include pages/play.html %}
+	{% elsif page.url == "/shop/" %}
+	{% include pages/shop.html %}
+	{{ content }}
 	{% elsif page.url == "/privacy-policy/" %}
 	{{ content }}
 	{% elsif page.url == "/terms-and-conditions/" %}
@@ -71,11 +76,16 @@
 	{% if page.previous %}
 	<a href="{{ page.previous }}" class="btn btn-nav">Back</a>
 	{% endif %}
+	{% if page.url contains "/shop/" %}
+	
+	{% endif %}
 	</div>
 	</section>
 	{% include footer.html %}
 	{% if jekyll.environment == 'production' %}
   {% include analytics.html %}
   {% endif %}
+  <div id="snipcart" data-api-key="Zjc1NjdiYmYtYTdjMy00NjFhLTk3OTItOTBmODJjYjBmMWJiNjM3MTczMDQzODY3NzAzMDI5" hidden></div>
+	<script src="https://cdn.snipcart.com/themes/v3.0.11/default/snipcart.js"></script>
 	</body>
 </html>

@@ -24,3 +24,7 @@ plugins:
 paginate: 5
 syntax-highlight: True
 kickstarter: disabled
+collections:
+  shop_items:
+    output: true
+    permalink: /shop/:name

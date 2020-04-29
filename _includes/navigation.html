@@ -16,7 +16,7 @@
 			<li><a href="/skillz-games/">Skillz Games</a></li>
 			<li><a href="/skillz-promo-code/">Skillz Promo Code</a></li>
 			<li><a href="/skillz-match-codes/">Skillz Match Codes</a></li>
-			<li><a href="/play/">MMM Game</a></li>
+			<li><a href="/shop/">Shop</a></li>
 			<li><a href="/contact-us/">Contact</a></li>
 		</ul>
 		{% else %}
@@ -41,10 +41,12 @@
 			<li><a href="/skillz-match-codes/">Skillz Match Codes</a></li>
 			{% endif %}
 			
-			{% if page.url == "/play/" %}
-			<li class="active"><a href="/play/">MMM Game</a></li>
+			{% if page.url contains "/shop/" %}
+			<li class="active cart-menu"><a href="#0" class="snipcart-total-price snipcart-checkout"></a></li>
+			</li>
 			{% else %}
-			<li><a href="/play/">MMM Game</a></li>
+			<li><a href="/shop/">Shop</a></li>
+			</li>
 			{% endif %}
 			
 			
