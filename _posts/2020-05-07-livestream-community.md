@@ -31,7 +31,7 @@ Devs: Contact <a href="https://modurist.com">Modurist Team</a> via <a href="mail
 
 ## Registration is Now Open!
 
-The **eSportsMedium LIVE Community** awaits: <a href="https://esportsmedium.com/">create your free account right now</a> and you won't miss the next live stream and any of Mikey's Skillz Match Codes!
+The **eSportsMedium LIVE Community** awaits: <a href="https://live.esportsmedium.com/">create your free account right now</a> and you won't miss the next live stream and any of Mikey's Skillz Match Codes!
 
 
 
