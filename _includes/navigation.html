@@ -16,7 +16,7 @@
 			<li><a href="/skillz-games/">Skillz Games</a></li>
 			<li><a href="/skillz-promo-code/">Skillz Promo Code</a></li>
 			<li><a href="/skillz-match-codes/">Skillz Match Codes</a></li>
-			<li><a href="/shop/">Shop</a></li>
+			<li><a href="/blog/">Blog</a></li>
 			<li><a href="https://live.esportsmedium.com/">Live!</a></li>
 		</ul>
 		{% else %}
@@ -41,6 +41,13 @@
 			<li><a href="/skillz-match-codes/">Skillz Match Codes</a></li>
 			{% endif %}
 			
+			{% if page.url == "/blog/" %}
+			<li class="active"><a href="/blog/">Blog</a></li>
+			{% else %}
+			<li><a href="/blog/">Blog</a></li>
+			{% endif %}
+			
+			<!--
 			{% if page.url contains "/shop/" %}
 			<li class="active cart-menu"><a href="#0" class="snipcart-total-price snipcart-checkout"></a></li>
 			</li>
@@ -48,6 +55,7 @@
 			<li><a href="/shop/">Shop</a></li>
 			</li>
 			{% endif %}
+			-->
 			
 			<li><a href="https://live.esportsmedium.com/">Live!</a></li>
 			
