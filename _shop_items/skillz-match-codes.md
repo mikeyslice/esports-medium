@@ -1,15 +1,15 @@
 ---
 layout: shop-item
 title: Skillz Match Codes
-description: Pack of 35 active codes for May 4th - May 24th.
-subtitle: Pack of 35 active codes for May 4th - May 24th.
+description: Pack of 35 active codes for May 11th - May 31st.
+subtitle: Pack of 35 active codes for May 11th - May 31st.
 image: /assets/img/shop-match-codes.svg
 data-item-id: smc
 data-item-price: 4.99
 data-item-url: /shop/skillz-match-codes/
-data-item-description: Pack of 35 active codes for May 4th - May 24th.
+data-item-description: Pack of 35 active codes for May 11th - May 31st.
 data-item-image: /assets/img/shop-match-codes-snipcart.svg
-data-item-file-guid: 9141a683-d4ec-43d0-8942-40f51e82c51f
+data-item-file-guid: ddcfac6e-6a51-4185-9046-1d608cc3f09e
 data-item-name: Skillz Match Codes
 data-item-max-quantity: 1
 data-item-shippable: false
@@ -17,7 +17,7 @@ data-item-shippable: false
 
 ## Contents
 
-After purchase you will receive an email containing a PDF file with __at least 35 active Skillz Match Codes__. These are valid for May 4th - May 24th, 2020.
+After purchase you will receive an email containing a PDF file with __at least 35 active Skillz Match Codes__. These are valid for May 11th - May 31st, 2020.
 
 Just open the file and use the codes for the appropriate games, before they expire.
 
