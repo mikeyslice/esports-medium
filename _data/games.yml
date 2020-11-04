@@ -1,3 +1,9 @@
+- name: Sugar Rush – Match 3 eSports
+  page-link: /sugar-rush
+  image-path: /assets/icons/games/sugar-rush.webp
+  image-alt: Sugar Rush
+  ios-dl: https://apps.apple.com/us/app/sugar-rush-match-3-esports/id1127370018
+
 - name: Cube Cube
   page-link: /cube-cube
   image-path: /assets/icons/games/cube-cube.jpg
