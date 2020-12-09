@@ -2,7 +2,8 @@
   page-link: /sugar-rush
   image-path: /assets/icons/games/sugar-rush.webp
   image-alt: Sugar Rush
-  ios-dl: https://apps.apple.com/us/app/sugar-rush-match-3-esports/id1127370018
+  ios-dl: https://esportsmedium.com/sugar-rush-ios
+  android-dl: https://esportsmedium.com/sugar-rush-android
 
 - name: Cube Cube
   page-link: /cube-cube
